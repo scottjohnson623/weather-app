@@ -17,22 +17,15 @@ export default function Form() {
   return (
     <div className="input">
       <input
-        placeholder="Enter Zipcode Here"
-        onChange={(e) => {
-          dispatch({ type: "SET_INPUT", payload: e.target.value });
-        }}
-      />
-      <MDBInput
-        placeholder="Enter Zipcode Here"
-        onChange={(e) => {
-          dispatch({ type: "SET_INPUT", payload: e.target.value });
-        }}
-        background
-        outline
-        size="lg"
         className="textinput"
+        placeholder="Enter 7-digit postcode here, e.x. '1710052' or '171-0052'"
+        onChange={(e) => {
+          dispatch({ type: "SET_INPUT", payload: e.target.value });
+        }}
       />
-      <button onClick={getWeather}>Submit</button>
+      <button className="inputbutton btn btn-light-blue" onClick={getWeather}>
+        Submit
+      </button>
     </div>
   );
 }

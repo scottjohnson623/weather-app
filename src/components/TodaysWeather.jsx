@@ -16,6 +16,11 @@ export default function TodaysWeather() {
           </tr>
         </MDBTableHead>
         <MDBTableBody>
+          {forecast[0].hour.map((elem, i) => {
+            if (i % 3 == 0) {
+              return "hi";
+            }
+          })}
           <tr>
             <td>1</td>
             <td>Mark</td>

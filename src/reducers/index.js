@@ -7,6 +7,7 @@ const initialState = {
   loading: false,
   lat: 0,
   lng: 0,
+  submitted: false,
 };
 
 const reducer = (state = initialState, action) => {
