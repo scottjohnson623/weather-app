@@ -8,7 +8,12 @@ export default function TodaysWeather() {
 
   return (
     <div>
-      Today's Weather:
+      Weather for{" "}
+      {date.transform(
+        forecast[0].hour[0].time,
+        "YYYY-MM-DD HH:mm",
+        "MMM DD, YYYY"
+      )}
       <MDBTable className="weathertable">
         <MDBTableHead>
           <tr>
