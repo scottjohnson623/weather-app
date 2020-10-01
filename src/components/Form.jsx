@@ -7,7 +7,7 @@ export default function Form() {
   //todo- add input scrubbing / verification / error handling
   async function getWeather() {
     //toggle submitted and loading
-    dispatch({ type: "SUBMITTED" });
+    dispatch({ type: "TOGGLE_LOADING" });
     let locationdata = await axios.get(`/api/weather/${input}`);
     dispatch({ type: "SET_DATA", payload: locationdata.data });
     dispatch({ type: "TOGGLE_LOADING" });

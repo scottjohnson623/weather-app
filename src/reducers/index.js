@@ -4,8 +4,7 @@ const initialState = {
   input: "",
   forecast: [],
   locationName: "",
-  submitted: false,
-  loading: true,
+  loading: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -25,9 +24,6 @@ const reducer = (state = initialState, action) => {
         ", " +
         action.payload.location.address_components[3].long_name;
       return newState;
-    }
-    case "SUBMITTED": {
-      return { ...state, submitted: true };
     }
     case "TOGGLE_LOADING": {
       return { ...state, loading: !state.loading };
