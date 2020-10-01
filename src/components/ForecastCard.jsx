@@ -1,6 +1,5 @@
 import React from "react";
 import date from "date-and-time";
-
 export default function ForecastCard(props) {
   return (
     <div className="card">
