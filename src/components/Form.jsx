@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { MDBInput } from "mdbreact";
 import axios from "axios";
 export default function Form() {
   const input = useSelector((state) => state.input);
@@ -14,14 +15,24 @@ export default function Form() {
     dispatch({ type: "TOGGLE_LOADING" });
   }
   return (
-    <>
+    <div className="input">
       <input
         placeholder="Enter Zipcode Here"
         onChange={(e) => {
           dispatch({ type: "SET_INPUT", payload: e.target.value });
         }}
       />
+      <MDBInput
+        placeholder="Enter Zipcode Here"
+        onChange={(e) => {
+          dispatch({ type: "SET_INPUT", payload: e.target.value });
+        }}
+        background
+        outline
+        size="lg"
+        className="textinput"
+      />
       <button onClick={getWeather}>Submit</button>
-    </>
+    </div>
   );
 }

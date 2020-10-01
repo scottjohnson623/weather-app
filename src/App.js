@@ -10,6 +10,8 @@ function App() {
   const loading = useSelector((state) => state.loading);
   return (
     <div className="App">
+      <span className="logo">What's the Weather?</span>
+      <br />
       <Form />
       {loading ? <div className="loader"></div> : <Results />}
     </div>
