@@ -3,7 +3,7 @@ import date from "date-and-time";
 export default function ForecastCard(props) {
   return (
     <div className="card">
-      <img src={props.data.day.condition.icon} />
+      <img className="cardimg" src={props.data.day.condition.icon} />
       <div className="spacebetween">
         <span> {props.data.date} </span>
         <span>{date.transform(props.data.date, "YYYY-MM-DD", "ddd")}</span>

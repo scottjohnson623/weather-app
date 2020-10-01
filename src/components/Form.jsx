@@ -9,6 +9,7 @@ export default function Form() {
     //toggle submitted and loading
     dispatch({ type: "TOGGLE_LOADING" });
     let locationdata = await axios.get(`/api/weather/${input}`);
+    console.log(locationdata.data);
     dispatch({ type: "SET_DATA", payload: locationdata.data });
     dispatch({ type: "TOGGLE_LOADING" });
   }

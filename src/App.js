@@ -1,26 +1,17 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Form from "./components/Form";
-import ForecastCard from "./components/ForecastCard";
+import Results from "./components/Results";
 import "./styles/App.css";
 import "./styles/spinner.css";
 
 function App() {
   //importing state
   const loading = useSelector((state) => state.loading);
-  const forecast = useSelector((state) => state.forecast);
   return (
     <div className="App">
       <Form />
-      {loading ? (
-        <div class="loader">Loading...</div>
-      ) : (
-        <div className="cardwrapper">
-          {forecast.map((elem) => (
-            <ForecastCard data={elem} />
-          ))}
-        </div>
-      )}
+      {loading ? <div className="loader"></div> : <Results />}
     </div>
   );
 }

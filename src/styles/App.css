@@ -1,20 +1,37 @@
 .App {
-  width: 80vw;
-  height: 80vh;
+  width: 50vw;
   margin: auto;
+  margin-top: 3vh;
+}
+.bottomwrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50vw;
+  justify-content: space-between;
 }
 .card {
-  width: 20vw;
-  height: 40vh;
+  width: 15vw;
+  height: 15vw;
   border-color: black;
   padding: 15px;
-  font-size: 1.5vw;
+  font-size: 1vw;
+}
+.cardimg {
+  width: 10vw;
+  height: 10vw;
+  margin: auto;
 }
 .cardwrapper {
   display: flex;
   flex-wrap: wrap;
+  width: 50vw;
+  height: 20vw;
+  justify-content: space-between;
 }
 .spacebetween {
   display: flex;
   justify-content: space-between;
+}
+.weathertable {
+  width: 20vw;
 }

@@ -5,6 +5,8 @@ const initialState = {
   forecast: [],
   locationName: "",
   loading: false,
+  lat: 0,
+  lng: 0,
 };
 
 const reducer = (state = initialState, action) => {
@@ -23,8 +25,12 @@ const reducer = (state = initialState, action) => {
         action.payload.location.address_components[2].long_name +
         ", " +
         action.payload.location.address_components[3].long_name;
+      newState.lat = action.payload.location.geometry.location.lat;
+      newState.lng = action.payload.location.geometry.location.lng;
+
       return newState;
     }
+    //toggling loading animation
     case "TOGGLE_LOADING": {
       return { ...state, loading: !state.loading };
     }
