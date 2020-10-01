@@ -3,6 +3,7 @@
 .App {
   width: 50vw;
   margin: auto;
+  background-color: white;
 }
 .bottomwrapper {
   display: flex;
