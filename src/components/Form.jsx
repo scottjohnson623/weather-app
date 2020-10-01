@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { MDBInput } from "mdbreact";
 import axios from "axios";
 export default function Form() {
   const input = useSelector((state) => state.input);
@@ -8,6 +7,7 @@ export default function Form() {
   //todo- add input scrubbing / verification / error handling
   async function getWeather() {
     //toggle submitted and loading
+    dispatch({ type: "SUBMITTED" });
     dispatch({ type: "TOGGLE_LOADING" });
     let locationdata = await axios.get(`/api/weather/${input}`);
     console.log(locationdata.data);

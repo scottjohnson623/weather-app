@@ -9,12 +9,14 @@ export default function Result() {
   const locationName = useSelector((state) => state.locationName);
   return (
     <div>
-      {locationName}
+      <span className="todaysweather">
+        <b> {locationName} </b>
+      </span>
       <br />
       3-Day Forecast
       <div className="cardwrapper">
-        {forecast.map((elem) => (
-          <ForecastCard data={elem} />
+        {forecast.map((elem, i) => (
+          <ForecastCard key={"card " + i} data={elem} />
         ))}
       </div>
       <div className="bottomwrapper">

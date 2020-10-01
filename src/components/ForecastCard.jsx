@@ -3,17 +3,22 @@ import date from "date-and-time";
 export default function ForecastCard(props) {
   return (
     <div className="card">
-      <img className="cardimg" src={props.data.day.condition.icon} />
+      <img
+        alt="weather"
+        className="cardimg"
+        src={props.data.day.condition.icon}
+      />
       <div className="spacebetween">
         <span> {props.data.date} </span>
         <span>{date.transform(props.data.date, "YYYY-MM-DD", "ddd")}</span>
       </div>
-      {props.data.day.condition.text} <br />
+      <b>{props.data.day.condition.text}</b>
       <div className="spacebetween">
-        <span>Max: {Math.round(props.data.day.maxtemp_c)} °C </span>
         <span>
-          Min:
-          {Math.round(props.data.day.mintemp_c)} °C
+          <b>Max:</b> {Math.round(props.data.day.maxtemp_c)} °C{" "}
+        </span>
+        <span>
+          <b>Min:</b> {Math.round(props.data.day.mintemp_c)} °C
         </span>
       </div>
     </div>

@@ -1,11 +1,11 @@
 import React from "react";
-import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import { withGoogleMap, GoogleMap } from "react-google-maps";
 import { useSelector } from "react-redux";
 
 // withGoogleMap takes a react component and returns one. We call these "Higher Order Components"
 const MyMap = withGoogleMap((props) => (
   <GoogleMap
-    defaultZoom={14}
+    defaultZoom={15}
     defaultCenter={{ lat: props.lat, lng: props.lng }}
   ></GoogleMap>
 ));

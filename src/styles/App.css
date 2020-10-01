@@ -14,12 +14,13 @@
   width: 13vw;
   height: 13vw;
   border-color: black;
-  padding: 15px;
   font-size: 1vw;
+  padding: 10px;
 }
 .cardimg {
-  width: 10vw;
-  height: 10vw;
+  width: 7vw;
+  height: 7vw;
+  margin-top: 0;
   margin: auto;
 }
 .cardwrapper {
@@ -39,10 +40,7 @@
   height: 5vh;
   width: 10vw;
 }
-.textinput {
-  height: 5vh;
-  width: 35vw;
-}
+
 .logo {
   margin: auto;
   font-size: 5vw;
@@ -53,6 +51,19 @@
   display: flex;
   justify-content: space-between;
 }
+.tableimg {
+  height: 3vh;
+  width: 3vh;
+}
+.textinput {
+  height: 5vh;
+  width: 35vw;
+}
+.todaysweather {
+  font-size: 2vw;
+}
 .weathertable {
   width: 20vw;
+  height: 28vw;
+  overflow-y: scroll;
 }

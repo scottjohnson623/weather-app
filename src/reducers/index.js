@@ -35,6 +35,9 @@ const reducer = (state = initialState, action) => {
     case "TOGGLE_LOADING": {
       return { ...state, loading: !state.loading };
     }
+    case "SUBMITTED": {
+      return { ...state, submitted: true };
+    }
     default:
       return state;
   }
