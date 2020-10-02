@@ -12,6 +12,7 @@
   flex-wrap: wrap;
   width: 50vw;
   justify-content: space-between;
+  margin-top: 20px;
 }
 .card {
   width: 15vw;
@@ -31,7 +32,9 @@
   flex-wrap: wrap;
   width: 50vw;
   height: 15vw;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .input {
   display: flex;
@@ -50,6 +53,10 @@
   font-family: "Sansita Swashed", cursive;
   color: #779ecb;
 }
+.results {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 .spacebetween {
   display: flex;
   justify-content: space-between;
@@ -66,6 +73,8 @@
   font-size: 2vw;
 }
 .weathertable {
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 20vw;
   height: 28vw;
   overflow-y: scroll;

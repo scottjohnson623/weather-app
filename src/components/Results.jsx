@@ -8,7 +8,7 @@ export default function Result() {
   const forecast = useSelector((state) => state.forecast);
   const locationName = useSelector((state) => state.locationName);
   return (
-    <div>
+    <div className="results">
       <span className="todaysweather">
         <b> {locationName} </b>
       </span>
