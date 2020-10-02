@@ -26,6 +26,23 @@ export default function ForecastCard(props) {
     if (text === "Moderate or heavy sleet showers") {
       return "Moderate to heavy sleet";
     }
+    if (text === "Moderate or heavy rain shower") {
+      return "Moderate to heavy rain";
+    }
+    if (text === "Moderate or heavy freezing rain") {
+      return "Freezing rain";
+    }
+    if (text === "Moderate rain at times") {
+      return "Intermittent rain";
+    }
+    if (text === "Thundery outbreaks possible") {
+      return "Thunder possible";
+    }
+    if (text === "Patchy freezing drizzle possible") {
+      return "Freezing drizzle";
+    } else {
+      return text;
+    }
   }
   return (
     <div className="card">
@@ -38,7 +55,7 @@ export default function ForecastCard(props) {
         <span> {props.data.date} </span>
         <span>{date.transform(props.data.date, "YYYY-MM-DD", "ddd")}</span>
       </div>
-      <b>{props.data.day.condition.text}</b>
+      <b>{filterWeatherText(props.data.day.condition.text)}</b>
       <div className="spacebetween">
         <span>
           <b>Max:</b> {Math.round(props.data.day.maxtemp_c)} °C{" "}

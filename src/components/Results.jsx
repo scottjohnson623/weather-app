@@ -20,7 +20,10 @@ export default function Result() {
         ))}
       </div>
       <div className="bottomwrapper">
-        <Map />
+        <div className="mapwrapper">
+          Map: <br /> <br />
+          <Map />
+        </div>
         <TodaysWeather />
       </div>
     </div>

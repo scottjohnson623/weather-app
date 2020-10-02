@@ -8,7 +8,7 @@ export default function TodaysWeather() {
 
   return (
     <div>
-      Weather for{" "}
+      Weather for today,{" "}
       {date.transform(
         forecast[0].hour[0].time,
         "YYYY-MM-DD HH:mm",
@@ -18,7 +18,7 @@ export default function TodaysWeather() {
         <MDBTableHead>
           <tr>
             <th>Time</th>
-            <th>Temp</th>
+            <th>Temperature</th>
             <th>Weather</th>
           </tr>
         </MDBTableHead>
@@ -30,7 +30,7 @@ export default function TodaysWeather() {
                   <th>
                     {date.transform(elem.time, "YYYY-MM-DD HH:mm", "HH:mm")}
                   </th>
-                  <th>{elem.temp_c}</th>
+                  <th>{elem.temp_c} °C</th>
                   <th>
                     <img
                       alt="weather"

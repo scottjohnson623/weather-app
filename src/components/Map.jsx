@@ -17,8 +17,8 @@ export default function Map() {
   return (
     <MyMap
       className="test"
-      containerElement={<div style={{ width: `23vw`, height: `28vw` }} />}
-      mapElement={<div style={{ width: `23vw`, height: `28vw` }} />}
+      containerElement={<div style={{ width: `28vw`, height: `28vw` }} />}
+      mapElement={<div style={{ width: `28vw`, height: `28vw` }} />}
       lng={lng}
       lat={lat}
     />
