@@ -15,9 +15,7 @@ export default function Form() {
       dispatch({ type: "SUBMITTED" });
       dispatch({ type: "TOGGLE_LOADING" });
       let locationdata = await axios.get(`/api/weather/${input}`);
-      console.log(locationdata);
       if (locationdata.status === 204) {
-        console.log("throwing error");
         dispatch({ type: "THROW_ERROR" });
         dispatch({ type: "TOGGLE_LOADING" });
       } else {
