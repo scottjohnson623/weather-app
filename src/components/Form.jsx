@@ -5,20 +5,23 @@ export default function Form() {
   const input = useSelector((state) => state.input);
   const error = useSelector((state) => state.error);
   const dispatch = useDispatch();
-  //todo- add input scrubbing / verification / error handling
+
   async function getWeather() {
+    //if length isn't enough for Japanese post code
     if (input.length !== 7 && input.length !== 8) {
       dispatch({ type: "THROW_ERROR" });
     } else {
-      //toggle submitted and loading
       dispatch({ type: "CLEAR_ERROR" });
       dispatch({ type: "SUBMITTED" });
       dispatch({ type: "TOGGLE_LOADING" });
       let locationdata = await axios.get(`/api/weather/${input}`);
+      //if the geocoding API doesn't find anything
       if (locationdata.status === 204) {
         dispatch({ type: "THROW_ERROR" });
         dispatch({ type: "TOGGLE_LOADING" });
-      } else {
+      }
+      //on successful call
+      else {
         dispatch({ type: "SET_DATA", payload: locationdata.data });
         dispatch({ type: "TOGGLE_LOADING" });
       }

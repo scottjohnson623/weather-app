@@ -1,6 +1,7 @@
 import React from "react";
 import date from "date-and-time";
 export default function ForecastCard(props) {
+  //function to shorten weather text for cards
   function filterWeatherText(text) {
     if (
       text === "Moderate or heavy snow with thunder" ||

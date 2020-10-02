@@ -2,7 +2,6 @@ import React from "react";
 import { withGoogleMap, GoogleMap } from "react-google-maps";
 import { useSelector } from "react-redux";
 
-// withGoogleMap takes a react component and returns one. We call these "Higher Order Components"
 const MyMap = withGoogleMap((props) => (
   <GoogleMap
     defaultZoom={15}
@@ -10,7 +9,6 @@ const MyMap = withGoogleMap((props) => (
   ></GoogleMap>
 ));
 
-// We use object destructuring here to shorten our code
 export default function Map() {
   const lat = useSelector((state) => state.lat);
   const lng = useSelector((state) => state.lng);

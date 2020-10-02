@@ -19,6 +19,7 @@ app.get("/api/weather/:postcode", async (req, res) => {
   let location = await axios.get(
     `https://maps.googleapis.com/maps/api/geocode/json?address=${req.params.postcode}&key=${process.env.googleapikey}`
   );
+  //if geocoding api doesn't get a result, send 204 status
   if (location.data.results.length === 0) {
     return res.status(204).send();
   }
