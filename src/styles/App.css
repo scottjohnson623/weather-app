@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap");
 
 .App {
+  padding: 15px;
   width: 50vw;
   margin: auto;
   background-color: white;

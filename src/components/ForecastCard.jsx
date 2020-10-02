@@ -1,6 +1,32 @@
 import React from "react";
 import date from "date-and-time";
 export default function ForecastCard(props) {
+  function filterWeatherText(text) {
+    if (
+      text === "Moderate or heavy snow with thunder" ||
+      text === "Patchy light snow with thunder"
+    ) {
+      return "Snow with thunder";
+    }
+    if (
+      text === "Moderate or heavy rain with thunder" ||
+      text === "Patchy light rain with thunder"
+    ) {
+      return "Rain with thunder";
+    }
+    if (
+      text === "Moderate or heavy showers of ice pellets" ||
+      text === "Light showers of ice pellets"
+    ) {
+      return "Hail";
+    }
+    if (text === "Moderate or heavy snow showers") {
+      return "Moderate to heavy snow";
+    }
+    if (text === "Moderate or heavy sleet showers") {
+      return "Moderate to heavy sleet";
+    }
+  }
   return (
     <div className="card">
       <img
