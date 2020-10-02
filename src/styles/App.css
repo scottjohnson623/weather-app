@@ -14,8 +14,8 @@
   justify-content: space-between;
 }
 .card {
-  width: 11vw;
-  height: 11vw;
+  width: 15vw;
+  height: 15vw;
   border-color: black;
   font-size: 1vw;
   padding: 10px;
@@ -31,7 +31,7 @@
   flex-wrap: wrap;
   width: 50vw;
   height: 15vw;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .input {
   display: flex;
