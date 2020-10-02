@@ -8,6 +8,7 @@ const initialState = {
   lat: 0,
   lng: 0,
   submitted: false,
+  error: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -37,6 +38,12 @@ const reducer = (state = initialState, action) => {
     }
     case "SUBMITTED": {
       return { ...state, submitted: true };
+    }
+    case "THROW_ERROR": {
+      return { ...state, error: true, submitted: false };
+    }
+    case "CLEAR_ERROR": {
+      return { ...state, error: false };
     }
     default:
       return state;

@@ -57,12 +57,8 @@ export default function ForecastCard(props) {
       </div>
       <b>{filterWeatherText(props.data.day.condition.text)}</b>
       <div className="spacebetween">
-        <span>
-          <b>Max:</b> {Math.round(props.data.day.maxtemp_c)} °C{" "}
-        </span>
-        <span>
-          <b>Min:</b> {Math.round(props.data.day.mintemp_c)} °C
-        </span>
+        <span>High: {Math.round(props.data.day.maxtemp_c)} °C </span>
+        <span>Low: {Math.round(props.data.day.mintemp_c)} °C</span>
       </div>
     </div>
   );

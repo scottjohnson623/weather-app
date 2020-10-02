@@ -19,6 +19,10 @@ app.get("/api/weather/:postcode", async (req, res) => {
   let location = await axios.get(
     `https://maps.googleapis.com/maps/api/geocode/json?address=${req.params.postcode}&key=${process.env.googleapikey}`
   );
+  console.log(location);
+  if (location.data.results.length === 0) {
+    return res.status(204).send();
+  }
   location = location.data.results[0];
   const lat = Math.round(location.geometry.location.lat * 10000) / 10000;
   const lng = Math.round(location.geometry.location.lng * 10000) / 10000;
@@ -28,7 +32,7 @@ app.get("/api/weather/:postcode", async (req, res) => {
     `http://api.weatherapi.com/v1/forecast.json?key=${process.env.weatherapikey}&q=${lat},${lng}&days=3`
   );
   weather = weather.data;
-  res.send({ location, weather });
+  return res.send({ location, weather });
 });
 
 //starting up the server
